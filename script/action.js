@@ -48,3 +48,4 @@ $(function() {
         $(this).find('.lnb').stop(true, true).slideUp(300); // 0.3초 동안 부드럽게 올라감
     });
 });
+
