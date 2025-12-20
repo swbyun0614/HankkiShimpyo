@@ -48,20 +48,20 @@ header nav .gnb {
                 position: absolute; left: 50%; top: 50px; z-index: 10;
                 transform: translateX(-50%);
                 display: none;
-                width: 200px; background: #fff; border-radius: 15px; transition: max-height 0.4s ease-in-out; overflow: hidden;
+                width: 200px; border-radius: 30px; transition: max-height 0.4s ease-in-out; overflow: hidden;
             }
             header nav .gnb li:hover .lnb {
                 transition: 0.1s;
             }
             header nav .gnb li .lnb li a {
                 display: block; text-align: center;
-                padding: 15px; border-radius: 15px; background: #fff; transition: .2s;
+                padding: 15px; border-radius: 30px; background: #fff; font-size: 15px; border-bottom: 2px solid #fff;
             }
             header nav .gnb li .lnb li:last-child a {
                 padding-bottom: 20px;
             }
             header nav .gnb li .lnb li:hover a {
-                background: #F5DD79;
+                background: #F5DD79; border-bottom: 2px solid #EFBF39; color: #AA4B09;
             }
 
 .nav-indicator {
@@ -153,10 +153,27 @@ header nav .gnb {
     .hero .textbox h2 span {
         font-weight: 600; color: #fff;
     }
-    .hero .textbox .btn_go {}
     .hero .textbox .btn_go a {
         display: flex; justify-content: center; align-items: center; gap: 15px;
         width: 180px; padding: 20px; color: #fff; border-radius: 40px; font-size: 18px; margin-top: 38px;
         border: 3px solid #fff;
     }
     
+section .section1 {
+    margin-top: 86px;
+}
+section .section1 h2 {
+    position: relative; left: 15%;
+    font-size: 32px;
+}
+section .section1 .contentBox {
+    display: flex;
+}
+section .section1 .content {}
+    section .section1 .content h3 {}
+    section .section1 .content > span {}
+    section .section1 .content .list {}
+        section .section1 .content .list li {}
+        section .section1 .content .list li a {}
+        section .section1 .content .list li a span {}
+        section .section1 .content .list li a span.date {}
