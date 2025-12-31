@@ -2,6 +2,7 @@
 
 @import url(font.css);
 @import url(reset.css);
+@import url(mediaQuery.css);
 
 body {font-family: 'Paperozi';}
 
@@ -17,6 +18,10 @@ header .topset {
     header .topset .top1 li a {
         display: flex; align-items: center; gap: 3px;
     }
+    header .topset .top1 li:last-child a {
+        gap: 6px;
+    }
+
 
     header .topset .top2 {
         display: flex; gap: 50px;
@@ -27,7 +32,10 @@ header .topset {
 
     header h1 img {
         display: block; margin: 15px auto 0;
-    }
+        width: 83px;      /* 로고의 절대적인 크기 지정 */
+        max-width: 100%;   /* 화면이 로고보다 작아질 경우 대비 */
+        height: auto;      /* 비율 유지 */
+        }
 
 header nav .gnb {
     position: relative;
@@ -55,13 +63,13 @@ header nav .gnb {
             }
             header nav .gnb li .lnb li a {
                 display: block; text-align: center;
-                padding: 15px; border-radius: 30px; background: #fff; font-size: 15px; border-bottom: 2px solid #fff;
+                padding: 15px; border-radius: 30px; background: linear-gradient(to bottom, #fff, 90%, #f7f7f7); font-size: 15px; border-bottom: 2px solid #f7f7f7;
             }
             header nav .gnb li .lnb li:last-child a {
                 padding-bottom: 20px;
             }
             header nav .gnb li .lnb li:hover a {
-                background: #F5DD79; border-bottom: 2px solid #EFBF39; color: #AA4B09;
+                background: linear-gradient(to bottom, #F5DD79, 90%, #EFBF39); border-bottom: 2px solid #EFBF39; color: #AA4B09;
             }
 
 .nav-indicator {
@@ -163,17 +171,67 @@ section .section1 {
     margin-top: 86px;
 }
 section .section1 h2 {
-    position: relative; left: 15%;
-    font-size: 32px;
+    font-size: 32px; margin-bottom: 54px; margin-left: 15%; font-weight: 600;
 }
 section .section1 .contentBox {
-    display: flex;
+    display: flex; gap: 90px; justify-content: center;
 }
-section .section1 .content {}
-    section .section1 .content h3 {}
-    section .section1 .content > span {}
-    section .section1 .content .list {}
-        section .section1 .content .list li {}
-        section .section1 .content .list li a {}
-        section .section1 .content .list li a span {}
-        section .section1 .content .list li a span.date {}
+    section .section1 .content h3 {
+        font-size: 26px; font-weight: 600;
+    }
+    section .section1 .content div {
+        display: flex; justify-content: space-between; align-items: center;
+        margin-bottom: 15px; padding-bottom: 14px; border-bottom: 1px solid #EFBF39;
+    }
+    section .section1 .content div > span {
+        color: #848484; font-size: 14px;
+    }
+        section .section1 .content .list li a {
+            display: flex; justify-content: space-between; gap: 5px; align-items: center;
+        }
+        section .section1 .content .list li a span:first-child {
+            font-size: 18px; font-weight: 400; flex-grow: 1;
+            text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+            line-height: 35px; width: 276px; color: #474747;
+        }
+        section .section1 .content .list li a span.date {
+            flex-grow: 0;
+            font-size: 14px; font-weight: 400; color: #848484;
+        }
+
+section .section2 {
+    position: relative;
+    margin-top: 200px;
+}
+    section .section2 h2 {
+        text-align: center;
+        font-size: 32px; font-weight: 600; margin-bottom: 50px;
+    }
+    section .section2 .contentBox {
+        display: flex; gap: 100px; justify-content: center;
+    }
+    section .section2 .contentBox > a .textbox {
+        max-width: 381px; height: 212px; background: #F2EEED;
+    }
+    section .section2 > img {
+        position: absolute; left: 0; top: 126px; z-index: -1;
+        transform: translateX(-75%);
+    }
+    section .section2 .contentBox .textbox > div {
+        padding: 28px 33px; font-size: 18px;
+    }
+    section .section2 .contentBox .textbox h3 {
+        font-size: 24px; font-weight: 600;
+    }
+    section .section2 .contentBox .textbox p {
+        margin-top: 25px; color: #878787;
+    }
+    section .section2 .contentBox .textbox span {
+        display: block;
+        margin-top: 35px;
+    }
+    section .section2 > a {
+        display: flex; justify-content: center; align-items: center; gap: 17px;
+        font-size: 15px; font-weight: 600; color: #848484;
+        margin: 53px auto 0;
+    }

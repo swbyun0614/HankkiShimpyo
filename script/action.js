@@ -49,3 +49,9 @@ $(function() {
     });
 });
 
+$(function(){
+    $('.hamburger').click(function(){
+        $(this).toggleClass('active');
+        $('.gnb').fadeToggle(); // 또는 별도의 모바일 메뉴 클래스 토글
+    });
+});

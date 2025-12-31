@@ -1,0 +1,71 @@
+/* [1. Tablet & Mobile 공통 (1024px 미만)] */
+@media screen and (max-width: 1023px) {
+    /* 상단 topset 구조 변경 */
+    header .topset {
+        margin: 15px auto;
+        padding: 0 20px;
+    }
+    header .topset .top1 { margin-left: 0; gap: 20px; }
+    header .topset .top2 { display: none; }
+
+    /* 로고 사이즈 축소 */
+    header h1 img {
+        width: 83px;  
+        margin-top: 10px;
+    }
+
+    /* 메인 네비게이션 숨김 및 인디케이터 비활성화 */
+    header nav .gnb, 
+    .nav-indicator { 
+        display: none !important; 
+    }
+
+    /* 햄버거 버튼 */
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 65px;
+        right: 60px;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #763B13;
+        margin-bottom: 6px;
+        transition: 0.3s;
+    }
+
+    /* 히어로 섹션 텍스트 크기 조정 */
+    .hero .textbox {
+        right: 5%;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+    }
+    .hero .textbox h2 { font-size: 36px; }
+    .hero .textbox p { font-size: 16px; }
+    .hero .textbox .btn_go a { width: 140px; padding: 12px; font-size: 16px; }
+
+    /* 섹션 레이아웃 1열 배치 */
+    section .section1 h2 { margin-left: 5%; text-align: center; }
+    section .section1 .contentBox { flex-direction: column; align-items: center; gap: 40px; }
+    section .section1 .content { width: 90%; }
+
+    section .section2 .contentBox { flex-direction: column; align-items: center; gap: 30px; }
+    section .section2 .contentBox > div .textbox { max-width: 90%; height: auto; padding-bottom: 20px; }
+    section .section2 > img { display: none; } /* 배경 이미지 숨김으로 가독성 확보 */
+}
+
+/* [2. Mobile 전용 (768px 미만)] */
+@media screen and (max-width: 767px) {
+    header .topset .top1 li a { font-size: 13px; }
+    .hero .textbox h2 { font-size: 28px; }
+    
+    /* 베스트 메뉴 이미지 가로폭 꽉 차게 */
+    section .section2 .contentBox img { width: 100%; }
+}
