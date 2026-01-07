@@ -166,6 +166,23 @@ header nav .gnb {
         width: 180px; padding: 20px; color: #fff; border-radius: 40px; font-size: 18px; margin-top: 38px;
         border: 3px solid #fff;
     }
+    .hero .textbox .btn_go:hover a img {
+        animation: btnAni .3s;
+    }
+    @keyframes btnAni {
+        0% {
+            margin-left: 0;
+        }
+        50% {
+            margin-left: 10px;
+        }
+        80% {
+            margin-left: -2px;
+        }
+        100% {
+            margin-left: 0;
+        }
+    }
     
 section .section1 {
     margin-top: 86px;
@@ -186,11 +203,17 @@ section .section1 .contentBox {
     section .section1 .content div > span {
         color: #848484; font-size: 14px;
     }
+    section .section1 .content div > span a {
+        padding: 8px 0;
+    }
         section .section1 .content .list li a {
             display: flex; justify-content: space-between; gap: 5px; align-items: center;
         }
+        section .section1 .content .list li a:hover span:first-child {
+            text-decoration: underline;
+        }
         section .section1 .content .list li a span:first-child {
-            font-size: 18px; font-weight: 400; flex-grow: 1;
+            font-size: 17px; font-weight: 400; flex-grow: 1;
             text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
             line-height: 35px; width: 276px; color: #474747;
         }
@@ -221,10 +244,10 @@ section .section2 {
         padding: 28px 33px; font-size: 18px;
     }
     section .section2 .contentBox .textbox h3 {
-        font-size: 24px; font-weight: 600;
+        font-size: 22px; font-weight: 600;
     }
     section .section2 .contentBox .textbox p {
-        margin-top: 25px; color: #878787;
+        margin-top: 25px; color: #878787; font-size: 16px; font-weight: 400;
     }
     section .section2 .contentBox .textbox span {
         display: block;
@@ -232,6 +255,6 @@ section .section2 {
     }
     section .section2 > a {
         display: flex; justify-content: center; align-items: center; gap: 17px;
-        font-size: 15px; font-weight: 600; color: #848484;
+        font-size: 15px; font-weight: 500; color: #848484;
         margin: 53px auto 0;
     }
