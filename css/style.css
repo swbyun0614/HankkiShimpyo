@@ -235,34 +235,34 @@ section .section2 {
     position: relative;
     margin-top: 200px;
 }
-    section .section2 h2 {
+    section .section2 .container h2 {
         text-align: center;
         font-size: 32px; font-weight: 600; margin-bottom: 50px;
     }
-    section .section2 .contentBox {
+    section .section2 .container .contentBox {
         display: flex; gap: 100px; justify-content: center;
     }
-    section .section2 .contentBox > a .textbox {
+    section .section2 .container .contentBox > a .textbox {
         max-width: 381px; height: 212px; background: #F2EEED;
     }
-    section .section2 > img {
+    section .section2 .section_bg {
         position: absolute; left: 0; top: 126px; z-index: -1;
         transform: translateX(-75%);
     }
-    section .section2 .contentBox .textbox > div {
+    section .section2 .container .contentBox .textbox > div {
         padding: 28px 33px; font-size: 18px;
     }
-    section .section2 .contentBox .textbox h3 {
+    section .section2 .container .contentBox .textbox h3 {
         font-size: 22px; font-weight: 600;
     }
-    section .section2 .contentBox .textbox p {
+    section .section2 .container .contentBox .textbox p {
         margin-top: 25px; color: #878787; font-size: 16px; font-weight: 400;
     }
-    section .section2 .contentBox .textbox span {
+    section .section2 .container .contentBox .textbox span {
         display: block;
         margin-top: 35px;
     }
-    section .section2 > a {
+    section .section2 .container > a {
         display: flex; justify-content: center; align-items: center; gap: 17px;
         font-size: 15px; font-weight: 500; color: #848484;
         margin: 53px auto 0;
