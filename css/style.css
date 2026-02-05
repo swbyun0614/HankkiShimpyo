@@ -8,7 +8,7 @@ body {font-family: 'Paperozi';}
 
 /* Container */
 .container {
-    width: 100%; max-width: 1420px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;
+    width: 100%; max-width: 1420px; margin: 0 auto; box-sizing: border-box;
 }
 
 
@@ -216,48 +216,51 @@ section .section2 {
 
 /* Section 3 - Banner Links */
 section .section3 {
-    margin-top: 120px;
+    margin-top: 185px;
 }
     section .section3 .banner-links {
-        display: flex; justify-content: center; gap: 30px;
+        display: flex; justify-content: center; gap: 20px;
     }
     section .section3 .banner-link {
         position: relative;
         display: block;
-        flex: 1; height: 150px; border-radius: 15px; overflow: hidden;
+        flex: 1; height: 150px; border-radius: 60px 60px 0 0; overflow: hidden;
     }
-    section .section3 .banner-link img:first-child {
-        width: 100%; height: 100%; object-fit: cover;
+    section .section3 .banner-link.two img.bgimg {
+        transform: scale(1.1);
+    }
+    section .section3 .banner-link img.icon {
+        position: absolute; bottom: 0; right: 2.18vw; z-index: 15;
+    }
+    section .section3 .banner-link.two img.icon {
+        right: 4.42vw;
     }
     section .section3 .banner-link .banner-overlay {
-        position: absolute; top: 0; left: 0;
-        width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+        position: absolute; top: -80px; right: -40px;
+        width: 600px; height: 800px; background: #EFBF39; transform: rotate(50deg);
+    }
+    section .section3 .banner-link .banner-overlay.two {
+        background: #F5DD79;
     }
     section .section3 .banner-link .banner-text {
-        position: absolute; top: 50%; left: 50%;
+        position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); z-index: 10;
         display: flex; align-items: center; gap: 15px;
-        transform: translate(-50%, -50%); font-size: 28px; font-weight: 600; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); white-space: nowrap;
-    }
-    section .section3 .banner-link .banner-icon {
-        width: 24px; height: 24px; filter: brightness(0) invert(1);
-    }
-    section .section3 .banner-link:hover .banner-overlay {
-        background: linear-gradient(to right, rgba(239,191,57,0.6), rgba(239,191,57,0.3));
+        font-size: 28px; font-weight: 600; color: #333; white-space: nowrap;
     }
 
 /* Section 4 - Review Grid */
 section .section4 {
-    margin-top: 120px;
+    margin-top: 180px;
 }
     section .section4 h2 {
         margin-bottom: 50px; font-size: 32px; font-weight: 600; text-align: center;
     }
     section .section4 .review-grid {
-        display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: auto auto auto; gap: 20px;
+        display: grid; grid-template-columns: 11.45vw 23.95vw 11.45vw 23.95vw; grid-template-rows: auto auto auto; gap: 28px 20px;
         width: 100%;
     }
     section .section4 .review-item {
-        border-radius: 10px; overflow: hidden;
+        overflow: hidden;
     }
     section .section4 .review-item.review-img-tall {
         grid-row: span 2;
@@ -265,15 +268,27 @@ section .section4 {
     section .section4 .review-item.review-img-tall img {
         width: 100%; height: 100%; object-fit: cover;
     }
-    section .section4 .review-item.review-img img,
-    section .section4 .review-item.review-img-wide img {
-        width: 100%; height: 100%; object-fit: cover;
+    section .section4 .review-item.review-img-tall.sec4_img1 {
+        max-width: 220px; max-height: 471px;
+    }
+    section .section4 .review-item.review-img.sec4_img2,
+    section .section4 .review-item.review-img-tall.sec4_img3 {
+        max-width: 220px; aspect-ratio: 1;
+    }
+    section .section4 .review-item.sec4_img4 {
+        max-width: 700px; max-height: 220px;
+    }
+    section .section4 .review-item.sec4_img2 img {
+        transform: translateY(-15%);
+    }
+    section .section4 .review-item.sec4_img4 img {
+        transform: translateY(-25%);
     }
     section .section4 .review-item.review-img-wide {
         grid-column: span 2;
     }
     section .section4 .review-item.review-text {
-        padding: 25px; background: #FFF9E6; border: 1px solid #EFBF39;
+        padding: 25px; background: #fff; border: 1px solid #EFBF39; box-shadow: 7px 8px 0 0 #F5DD79;
     }
     section .section4 .review-item.review-text.wide {
         grid-column: span 2;
