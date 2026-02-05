@@ -8,11 +8,7 @@ body {font-family: 'Paperozi';}
 
 /* Container */
 .container {
-    max-width: 1420px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+    width: 100%; max-width: 1420px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;
 }
 
 
@@ -40,11 +36,9 @@ header .topset {
     }
 
     header h1 img {
-        display: block; margin: 15px auto 0;
-        width: 83px;      /* 로고의 절대적인 크기 지정 */
-        max-width: 100%;   /* 화면이 로고보다 작아질 경우 대비 */
-        height: auto;      /* 비율 유지 */
-        }
+        display: block;
+        width: 83px; max-width: 100%; height: auto; margin: 15px auto 0;
+    }
 
 header nav .gnb {
     position: relative;
@@ -56,23 +50,22 @@ header nav .gnb {
     }
         header nav .gnb > li > a {
             display: block;
-            font-size: 18px; padding: 14px 50px;
+            padding: 14px 50px; font-size: 18px;
         }
         header nav .gnb > li:hover > a {
             font-weight: 500;
         }
             header nav .gnb li .lnb {
                 position: absolute; left: 50%; top: 50px; z-index: 10;
-                transform: translateX(-50%);
                 display: none;
-                width: 200px; border-radius: 30px; transition: max-height 0.4s ease-in-out; overflow: hidden;
+                width: 200px; border-radius: 30px; overflow: hidden; transform: translateX(-50%); transition: max-height 0.4s ease-in-out;
             }
             header nav .gnb li:hover .lnb {
                 transition: 0.1s;
             }
             header nav .gnb li .lnb li a {
-                display: block; text-align: center;
-                padding: 15px; border-radius: 30px; background: linear-gradient(to bottom, #fff, 90%, #f7f7f7); font-size: 15px; border-bottom: 2px solid #f7f7f7;
+                display: block;
+                padding: 15px; background: linear-gradient(to bottom, #fff, 90%, #f7f7f7); border-radius: 30px; border-bottom: 2px solid #f7f7f7; font-size: 15px; text-align: center;
             }
             header nav .gnb li .lnb li:last-child a {
                 padding-bottom: 20px;
@@ -82,53 +75,22 @@ header nav .gnb {
             }
 
 .nav-indicator {
-    position: absolute;
-    bottom: 0px; /* 위치 조정 */
-    left: 0;
-    height: 13px;  /* 이미지 높이에 맞게 조정 */
-    background: url('../images/gnb_on.png') no-repeat center; 
-    background-size: contain;
-    transition: all 0.3s ease-out; /* 이동을 부드럽게 만드는 핵심 */
-    opacity: 0;
-    pointer-events: none; /* 인디케이터가 마우스 이벤트를 방해하지 않도록 설정 */
-    z-index: 1;
+    position: absolute; bottom: 0px; left: 0; z-index: 1;
+    height: 13px; background: url('../images/gnb_on.png') no-repeat center; background-size: contain; opacity: 0; pointer-events: none; transition: all 0.3s ease-out;
 }
 
 /* 부모 요소: 배지의 기준점이 됨 */
 .cart-wrapper {
     position: relative;
     display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px; /* 텍스트(장바구니)와의 간격 */
+    margin-right: 5px; vertical-align: middle;
 }
 
-/* 부모 요소: 배지의 기준점이 됨 */
-.cart-wrapper {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px; /* 텍스트(장바구니)와의 간격 */
-}
 /* 주황색 동그라미 배지 */
 .cart-count {
-    position: absolute;
-    top: -5px;    /* 위쪽 위치 미세 조정 */
-    right: -8px;  /* 오른쪽 위치 미세 조정 */
-    
-    width: 15px;
-    height: 15px;
-    background-color: #E18601; /* 주황색 */
-    color: white;
-    
-    border-radius: 50%; /* 동그랗게 */
-    font-size: 10px;    /* 작은 글씨 */
-    font-weight: 600;
-    line-height: 15px;  /* 세로 중앙 정렬 */
-    text-align: center; /* 가로 중앙 정렬 */
-    
-    display: none;
-    align-items: center;
-    justify-content: center;
+    position: absolute; top: -5px; right: -8px;
+    display: none; align-items: center; justify-content: center;
+    width: 15px; height: 15px; background-color: #E18601; border-radius: 50%; font-size: 10px; font-weight: 600; line-height: 15px; color: white; text-align: center;
 }
 
 .hero {
@@ -139,27 +101,23 @@ header nav .gnb {
     background: none !important;
 }
 .swiper-slide > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
+    width: 100%; height: 100%; object-fit: cover;
 }
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
         bottom: var(--swiper-pagination-bottom, 590px) !important;
     }
     .swiper-pagination-bullet {
-    background: #763B13 !important;
-    opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
+        background: #763B13 !important; opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
     }
     .swiper-pagination-bullet-active-main {
-    background: #E18601 !important;
+        background: #E18601 !important;
     }
 .hero .textbox {
     position: absolute; top: 25%; right: 14%; z-index: 5;
     display: flex; flex-direction: column; align-items: end;
 }
     .hero .textbox p {
-        font-size: 22px; margin-top: 20px;
+        margin-top: 20px; font-size: 22px;
     }
     .hero .textbox p.date {
         font-size: 20px; font-weight: 500; color: #fff;
@@ -172,35 +130,26 @@ header nav .gnb {
     }
     .hero .textbox .btn_go a {
         display: flex; justify-content: center; align-items: center; gap: 15px;
-        width: 180px; padding: 20px; color: #fff; border-radius: 40px; font-size: 18px; margin-top: 38px;
-        border: 3px solid #fff;
+        width: 180px; margin-top: 38px; padding: 20px; border: 3px solid #fff; border-radius: 40px; font-size: 18px; color: #fff;
     }
     .hero .textbox .btn_go:hover a img {
         animation: btnAni .3s;
     }
     @keyframes btnAni {
-        0% {
-            margin-left: 0;
-        }
-        50% {
-            margin-left: 10px;
-        }
-        80% {
-            margin-left: -2px;
-        }
-        100% {
-            margin-left: 0;
-        }
+        0% { margin-left: 0; }
+        50% { margin-left: 10px; }
+        80% { margin-left: -2px; }
+        100% { margin-left: 0; }
     }
-    
+
 section .section1 {
     margin-top: 86px;
 }
 section .section1 h2 {
-    font-size: 32px; margin-bottom: 54px; font-weight: 600;
+    margin-bottom: 54px; font-size: 32px; font-weight: 600;
 }
 section .section1 .contentBox {
-    display: flex; gap: 90px; justify-content: center;
+    display: flex; justify-content: center; gap: 90px;
 }
     section .section1 .content h3 {
         font-size: 26px; font-weight: 600;
@@ -210,21 +159,20 @@ section .section1 .contentBox {
         margin-bottom: 15px; padding-bottom: 14px; border-bottom: 1px solid #EFBF39;
     }
     section .section1 .content div > span {
-        color: #848484; font-size: 14px;
+        font-size: 14px; color: #848484;
     }
     section .section1 .content div > span a {
         padding: 8px 0;
     }
         section .section1 .content .list li a {
-            display: flex; justify-content: space-between; gap: 5px; align-items: center;
+            display: flex; justify-content: space-between; align-items: center; gap: 5px;
         }
         section .section1 .content .list li a:hover span:first-child {
             text-decoration: underline;
         }
         section .section1 .content .list li a span:first-child {
-            font-size: 17px; font-weight: 400; flex-grow: 1;
-            text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
-            line-height: 35px; width: 276px; color: #474747;
+            flex-grow: 1;
+            width: 276px; font-size: 17px; font-weight: 400; line-height: 35px; color: #474747; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
         }
         section .section1 .content .list li a span.date {
             flex-grow: 0;
@@ -236,11 +184,10 @@ section .section2 {
     margin-top: 200px;
 }
     section .section2 .container h2 {
-        text-align: center;
-        font-size: 32px; font-weight: 600; margin-bottom: 50px;
+        margin-bottom: 50px; font-size: 32px; font-weight: 600; text-align: center;
     }
     section .section2 .container .contentBox {
-        display: flex; gap: 100px; justify-content: center;
+        display: flex; justify-content: center; gap: 100px;
     }
     section .section2 .container .contentBox > a .textbox {
         max-width: 381px; height: 212px; background: #F2EEED;
@@ -256,7 +203,7 @@ section .section2 {
         font-size: 22px; font-weight: 600;
     }
     section .section2 .container .contentBox .textbox p {
-        margin-top: 25px; color: #878787; font-size: 16px; font-weight: 400;
+        margin-top: 25px; font-size: 16px; font-weight: 400; color: #878787;
     }
     section .section2 .container .contentBox .textbox span {
         display: block;
@@ -264,8 +211,7 @@ section .section2 {
     }
     section .section2 .container > a {
         display: flex; justify-content: center; align-items: center; gap: 17px;
-        font-size: 15px; font-weight: 500; color: #848484;
-        margin: 53px auto 0;
+        margin: 53px auto 0; font-size: 15px; font-weight: 500; color: #848484;
     }
 
 /* Section 3 - Banner Links */
@@ -273,45 +219,27 @@ section .section3 {
     margin-top: 120px;
 }
     section .section3 .banner-links {
-        display: flex; gap: 30px; justify-content: center;
+        display: flex; justify-content: center; gap: 30px;
     }
     section .section3 .banner-link {
         position: relative;
         display: block;
-        flex: 1;
-        height: 150px;
-        border-radius: 15px;
-        overflow: hidden;
+        flex: 1; height: 150px; border-radius: 15px; overflow: hidden;
     }
     section .section3 .banner-link img:first-child {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 100%; height: 100%; object-fit: cover;
     }
     section .section3 .banner-link .banner-overlay {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
     }
     section .section3 .banner-link .banner-text {
-        position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        font-size: 28px;
-        font-weight: 600;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        white-space: nowrap;
+        position: absolute; top: 50%; left: 50%;
+        display: flex; align-items: center; gap: 15px;
+        transform: translate(-50%, -50%); font-size: 28px; font-weight: 600; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); white-space: nowrap;
     }
     section .section3 .banner-link .banner-icon {
-        width: 24px;
-        height: 24px;
-        filter: brightness(0) invert(1);
+        width: 24px; height: 24px; filter: brightness(0) invert(1);
     }
     section .section3 .banner-link:hover .banner-overlay {
         background: linear-gradient(to right, rgba(239,191,57,0.6), rgba(239,191,57,0.3));
@@ -322,83 +250,55 @@ section .section4 {
     margin-top: 120px;
 }
     section .section4 h2 {
-        text-align: center;
-        font-size: 32px;
-        font-weight: 600;
-        margin-bottom: 50px;
+        margin-bottom: 50px; font-size: 32px; font-weight: 600; text-align: center;
     }
     section .section4 .review-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto auto auto;
-        gap: 20px;
+        display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: auto auto auto; gap: 20px;
         width: 100%;
     }
     section .section4 .review-item {
-        border-radius: 10px;
-        overflow: hidden;
+        border-radius: 10px; overflow: hidden;
     }
     section .section4 .review-item.review-img-tall {
         grid-row: span 2;
     }
     section .section4 .review-item.review-img-tall img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 100%; height: 100%; object-fit: cover;
     }
     section .section4 .review-item.review-img img,
     section .section4 .review-item.review-img-wide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 100%; height: 100%; object-fit: cover;
     }
     section .section4 .review-item.review-img-wide {
         grid-column: span 2;
     }
     section .section4 .review-item.review-text {
-        background: #FFF9E6;
-        padding: 25px;
-        border: 1px solid #EFBF39;
+        padding: 25px; background: #FFF9E6; border: 1px solid #EFBF39;
     }
     section .section4 .review-item.review-text.wide {
         grid-column: span 2;
     }
     section .section4 .review-item.review-text h3 {
-        font-size: 18px;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 12px;
+        margin-bottom: 12px; font-size: 18px; font-weight: 600; color: #333;
     }
     section .section4 .review-item.review-text .reviewer {
-        font-size: 14px;
-        color: #999;
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 10px; font-size: 14px; color: #999;
     }
     section .section4 .review-item.review-text p {
-        font-size: 15px;
-        color: #666;
-        line-height: 1.6;
+        font-size: 15px; line-height: 1.6; color: #666;
     }
 
 /* TOP Button */
 .top-btn {
-    text-align: center;
-    margin: 80px 0 60px;
+    margin: 80px 0 60px; text-align: center;
 }
     .top-btn a {
         display: inline-block;
-        padding: 12px 30px;
-        border: 1px solid #999;
-        border-radius: 30px;
-        color: #666;
-        font-size: 14px;
-        transition: all 0.3s;
+        padding: 12px 30px; border: 1px solid #999; border-radius: 30px; font-size: 14px; color: #666; transition: all 0.3s;
     }
     .top-btn a:hover {
-        background: #763B13;
-        color: #fff;
-        border-color: #763B13;
+        background: #763B13; border-color: #763B13; color: #fff;
     }
     .top-btn a span {
         margin-left: 5px;
@@ -406,31 +306,21 @@ section .section4 {
 
 /* Footer */
 footer {
-    background: #763B13;
-    padding: 50px 0;
+    padding: 50px 0; background: #763B13;
 }
     footer .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        gap: 60px;
-        padding: 0 20px;
+        display: flex; align-items: center; gap: 60px;
+        max-width: 1200px; margin: 0 auto; padding: 0 20px;
     }
     footer .footer-logo img {
-        width: 80px;
-        filter: brightness(0) invert(1);
+        width: 80px; filter: brightness(0) invert(1);
     }
     footer .footer-info {
-        color: rgba(255,255,255,0.8);
-        font-size: 13px;
-        line-height: 1.8;
+        font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.8);
     }
     footer .footer-info p {
         margin-bottom: 5px;
     }
     footer .footer-info .copyright {
-        margin-top: 15px;
-        color: rgba(255,255,255,0.6);
-        font-size: 12px;
+        margin-top: 15px; font-size: 12px; color: rgba(255,255,255,0.6);
     }
