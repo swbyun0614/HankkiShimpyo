@@ -258,3 +258,174 @@ section .section2 {
         font-size: 15px; font-weight: 500; color: #848484;
         margin: 53px auto 0;
     }
+
+/* Section 3 - Banner Links */
+section .section3 {
+    margin-top: 120px;
+    padding: 0 10%;
+}
+    section .section3 .banner-links {
+        display: flex; gap: 30px; justify-content: center;
+    }
+    section .section3 .banner-link {
+        position: relative;
+        display: block;
+        width: 45%;
+        max-width: 500px;
+        height: 150px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    section .section3 .banner-link img:first-child {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    section .section3 .banner-link .banner-overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+    }
+    section .section3 .banner-link .banner-text {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 28px;
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        white-space: nowrap;
+    }
+    section .section3 .banner-link .banner-icon {
+        width: 24px;
+        height: 24px;
+        filter: brightness(0) invert(1);
+    }
+    section .section3 .banner-link:hover .banner-overlay {
+        background: linear-gradient(to right, rgba(239,191,57,0.6), rgba(239,191,57,0.3));
+    }
+
+/* Section 4 - Review Grid */
+section .section4 {
+    margin-top: 120px;
+    padding: 0 10%;
+}
+    section .section4 h2 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 50px;
+    }
+    section .section4 .review-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    section .section4 .review-item {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    section .section4 .review-item.review-img-tall {
+        grid-row: span 2;
+    }
+    section .section4 .review-item.review-img-tall img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    section .section4 .review-item.review-img img,
+    section .section4 .review-item.review-img-wide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    section .section4 .review-item.review-img-wide {
+        grid-column: span 2;
+    }
+    section .section4 .review-item.review-text {
+        background: #FFF9E6;
+        padding: 25px;
+        border: 1px solid #EFBF39;
+    }
+    section .section4 .review-item.review-text.wide {
+        grid-column: span 2;
+    }
+    section .section4 .review-item.review-text h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 12px;
+    }
+    section .section4 .review-item.review-text .reviewer {
+        font-size: 14px;
+        color: #999;
+        display: block;
+        margin-bottom: 10px;
+    }
+    section .section4 .review-item.review-text p {
+        font-size: 15px;
+        color: #666;
+        line-height: 1.6;
+    }
+
+/* TOP Button */
+.top-btn {
+    text-align: center;
+    margin: 80px 0 60px;
+}
+    .top-btn a {
+        display: inline-block;
+        padding: 12px 30px;
+        border: 1px solid #999;
+        border-radius: 30px;
+        color: #666;
+        font-size: 14px;
+        transition: all 0.3s;
+    }
+    .top-btn a:hover {
+        background: #763B13;
+        color: #fff;
+        border-color: #763B13;
+    }
+    .top-btn a span {
+        margin-left: 5px;
+    }
+
+/* Footer */
+footer {
+    background: #763B13;
+    padding: 50px 0;
+}
+    footer .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        padding: 0 20px;
+    }
+    footer .footer-logo img {
+        width: 80px;
+        filter: brightness(0) invert(1);
+    }
+    footer .footer-info {
+        color: rgba(255,255,255,0.8);
+        font-size: 13px;
+        line-height: 1.8;
+    }
+    footer .footer-info p {
+        margin-bottom: 5px;
+    }
+    footer .footer-info .copyright {
+        margin-top: 15px;
+        color: rgba(255,255,255,0.6);
+        font-size: 12px;
+    }

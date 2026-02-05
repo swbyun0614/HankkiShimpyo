@@ -55,3 +55,13 @@ $(function(){
         $('.gnb').fadeToggle(); // 또는 별도의 모바일 메뉴 클래스 토글
     });
 });
+
+// TOP 버튼 클릭 시 페이지 상단으로 스크롤
+$(function() {
+    $('.top-btn a').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+    });
+});
