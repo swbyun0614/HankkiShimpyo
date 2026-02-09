@@ -289,13 +289,13 @@ section .section4 {
         max-width: 220px;
     }
     section .section4 .review-item.sec4_img2 {
-        max-width: 220px;
+        max-width: 220px; max-height: 250px;
     }
     section .section4 .review-item.sec4_img3 {
-        max-width: 220px;
+        max-width: 220px; max-height: 250px;
     }
     section .section4 .review-item.sec4_img4 {
-        max-width: 700px;
+        max-width: 700px; max-height: 250px;
     }
     section .section4 .review-item.review-text {
         display: flex; flex-direction: column; justify-content: center;
@@ -309,7 +309,7 @@ section .section4 {
         margin-bottom: 6px; font-size: 15px; color: #878787;
     }
     section .section4 .review-item.review-text p {
-        font-size: 18px; line-height: 1.6;
+        font-size: 18px; line-height: 1.4;
     }
 
 /* TOP Button */
