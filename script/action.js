@@ -58,13 +58,6 @@ $(function(){
         $('body').toggleClass('menu-open');
     });
 
-    // Close button inside mobile menu
-    $('#mobileMenuClose').click(function(){
-        $('.hamburger').removeClass('active');
-        $('#mobileMenu').removeClass('active');
-        $('body').removeClass('menu-open');
-    });
-
     // Mobile GNB accordion (tap to expand/collapse LNB with slide animation)
     $('.mobile-gnb > li > a').click(function(e){
         var $lnb = $(this).next('.mobile-lnb');

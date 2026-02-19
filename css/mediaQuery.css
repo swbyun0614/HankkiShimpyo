@@ -160,14 +160,13 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        position: absolute;
+        position: fixed;
         left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 25px;
         width: 28px;
         height: 20px;
         cursor: pointer;
-        z-index: 100;
+        z-index: 10000;
     }
     .hamburger span {
         display: block;
