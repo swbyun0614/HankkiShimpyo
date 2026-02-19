@@ -57,14 +57,11 @@
     transform: rotate(90deg);
 }
 
-/* Mobile LNB (sub menu) */
+/* Mobile LNB (sub menu) — show/hide controlled by jQuery slideDown/slideUp */
 .mobile-lnb {
     display: none;
     background: #faf7f3;
     border-top: 1px solid #f0e8d8;
-}
-.mobile-lnb.open {
-    display: block;
 }
 .mobile-lnb li a {
     display: block;
@@ -96,9 +93,7 @@
     border-bottom: none;
 }
 .mobile-util li a img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+    display: none;
 }
 
 

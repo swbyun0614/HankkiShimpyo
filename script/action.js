@@ -65,14 +65,19 @@ $(function(){
         $('body').removeClass('menu-open');
     });
 
-    // Mobile GNB accordion (tap to expand/collapse LNB)
+    // Mobile GNB accordion (tap to expand/collapse LNB with slide animation)
     $('.mobile-gnb > li > a').click(function(e){
         var $lnb = $(this).next('.mobile-lnb');
         if ($lnb.length > 0) {
             e.preventDefault();
             var $li = $(this).parent();
-            $li.toggleClass('open');
-            $lnb.toggleClass('open');
+            if ($li.hasClass('open')) {
+                $li.removeClass('open');
+                $lnb.stop(true, true).slideUp(300);
+            } else {
+                $li.addClass('open');
+                $lnb.stop(true, true).slideDown(300);
+            }
         }
     });
 
