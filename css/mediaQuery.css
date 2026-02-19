@@ -201,14 +201,45 @@
     .hero .textbox p { font-size: 16px; }
     .hero .textbox .btn_go a { width: 140px; padding: 12px; font-size: 16px; }
 
-    /* Section 1 */
+    /* Section 1: 첫 번째 content만 노출 */
     section .section1 h2 { text-align: center; }
     section .section1 .contentBox { flex-direction: column; align-items: center; gap: 40px; }
     section .section1 .content { width: 90%; }
+    section .section1 .contentBox .content:nth-child(n+2) { display: none; }
 
-    /* Section 2 */
-    section .section2 .contentBox { flex-direction: column; align-items: center; gap: 30px; }
-    section .section2 .container .contentBox > a .textbox { max-width: 90%; height: auto; padding-bottom: 20px; }
+    /* Section 2: 2×2 그리드 */
+    section .section2 .container .contentBox {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+    section .section2 .container .contentBox > a {
+        width: calc(50% - 8px);
+    }
+    section .section2 .container .contentBox > a img {
+        width: 100%;
+        height: auto;
+    }
+    section .section2 .container .contentBox > a .textbox {
+        max-width: 100%;
+        height: auto;
+    }
+    section .section2 .container .contentBox > a.mobile-only {
+        display: block;
+    }
+    /* section_bg 숨김 */
+    section .section2 .section_bg { display: none; }
+
+    /* Section 3: banner-link 세로 나열 */
+    section .section3 .banner-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    section .section3 .banner-link {
+        flex: none;
+        width: 100%;
+    }
 }
 
 

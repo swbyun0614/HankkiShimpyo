@@ -8,6 +8,9 @@ body {font-family: 'Paperozi';}
 /* Hamburger - hidden on desktop */
 .hamburger { display: none; }
 
+/* Section2 4th item: mobile-only, hidden on desktop */
+section .section2 .contentBox > a.mobile-only { display: none; }
+
 /* Mobile menu - hidden by default */
 .mobile-menu { display: none; }
 
