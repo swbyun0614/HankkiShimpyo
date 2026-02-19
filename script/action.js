@@ -49,10 +49,40 @@ $(function() {
     });
 });
 
+// Mobile menu open/close
 $(function(){
+    // Open mobile menu
     $('.hamburger').click(function(){
         $(this).toggleClass('active');
-        $('.gnb').fadeToggle(); // 또는 별도의 모바일 메뉴 클래스 토글
+        $('#mobileMenu').toggleClass('active');
+        $('body').toggleClass('menu-open');
+    });
+
+    // Close button inside mobile menu
+    $('#mobileMenuClose').click(function(){
+        $('.hamburger').removeClass('active');
+        $('#mobileMenu').removeClass('active');
+        $('body').removeClass('menu-open');
+    });
+
+    // Mobile GNB accordion (tap to expand/collapse LNB)
+    $('.mobile-gnb > li > a').click(function(e){
+        var $lnb = $(this).next('.mobile-lnb');
+        if ($lnb.length > 0) {
+            e.preventDefault();
+            var $li = $(this).parent();
+            $li.toggleClass('open');
+            $lnb.toggleClass('open');
+        }
+    });
+
+    // Close mobile menu on resize to desktop
+    $(window).on('resize', function(){
+        if ($(window).width() > 1023) {
+            $('.hamburger').removeClass('active');
+            $('#mobileMenu').removeClass('active');
+            $('body').removeClass('menu-open');
+        }
     });
 });
 

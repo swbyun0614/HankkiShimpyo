@@ -2,9 +2,17 @@
 
 @import url(font.css);
 @import url(reset.css);
-@import url(mediaQuery.css);
 
 body {font-family: 'Paperozi';}
+
+/* Hamburger - hidden on desktop */
+.hamburger { display: none; }
+
+/* Mobile menu - hidden by default */
+.mobile-menu { display: none; }
+
+/* Prevent background scroll when mobile menu is open */
+body.menu-open { overflow: hidden; }
 
 /* Container */
 .container {

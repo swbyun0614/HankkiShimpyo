@@ -1,33 +1,176 @@
-/* [1. Tablet & Mobile 공통 (1024px 미만)] */
+/* ============================================
+   Mobile Menu Overlay (JS-toggled, any screen)
+   ============================================ */
+.mobile-menu {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 9999;
+    background: #fff;
+    overflow-y: auto;
+}
+.mobile-menu.active {
+    display: block;
+}
+.mobile-menu-inner {
+    padding: 20px;
+    min-height: 100%;
+}
+.mobile-menu-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: #763B13;
+    cursor: pointer;
+    padding: 4px 10px;
+    line-height: 1;
+}
+
+/* Mobile GNB */
+.mobile-gnb {
+    border-top: 2px solid #EFBF39;
+}
+.mobile-gnb > li {
+    border-bottom: 1px solid #f0e8d8;
+}
+.mobile-gnb > li > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #333;
+}
+.mobile-gnb > li > a::after {
+    content: '›';
+    font-size: 20px;
+    color: #aaa;
+    transition: transform 0.2s;
+}
+.mobile-gnb > li.open > a::after {
+    transform: rotate(90deg);
+}
+
+/* Mobile LNB (sub menu) */
+.mobile-lnb {
+    display: none;
+    background: #faf7f3;
+    border-top: 1px solid #f0e8d8;
+}
+.mobile-lnb.open {
+    display: block;
+}
+.mobile-lnb li a {
+    display: block;
+    padding: 13px 25px;
+    font-size: 15px;
+    color: #474747;
+    border-bottom: 1px solid #eee;
+}
+.mobile-lnb li:last-child a {
+    border-bottom: none;
+}
+
+/* Mobile Utility Links */
+.mobile-util {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 2px solid #EFBF39;
+}
+.mobile-util li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 10px;
+    font-size: 15px;
+    color: #474747;
+    border-bottom: 1px solid #f0e8d8;
+}
+.mobile-util li:last-child a {
+    border-bottom: none;
+}
+.mobile-util li a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+/* ============================================
+   [1] Tablet & Mobile (max-width: 1023px)
+   ============================================ */
 @media screen and (max-width: 1023px) {
-    /* 상단 topset 구조 변경 */
-    header .topset {
-        margin: 15px auto;
+
+    /* --- Header: compact single row --- */
+    header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
         padding: 0 20px;
     }
-    header .topset .top1 { margin-left: 0; gap: 20px; }
-    header .topset .top2 { display: none; }
 
-    /* 로고 사이즈 축소 */
-    header h1 img {
-        width: 83px;  
-        margin-top: 10px;
+    /* Hide GNB nav */
+    header nav,
+    .nav-indicator {
+        display: none !important;
     }
 
-    /* 메인 네비게이션 숨김 및 인디케이터 비활성화 */
-    header nav .gnb, 
-    .nav-indicator { 
-        display: none !important; 
-    }
-
-    /* 햄버거 버튼 */
-    .hamburger {
-        display: block;
+    /* topset repositioned to right → only cart icon visible */
+    header .topset {
         position: absolute;
-        top: 65px;
-        right: 60px;
-        width: 30px;
-        height: 22px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        max-width: none;
+        width: auto;
+    }
+    header .topset .top1 {
+        margin-left: 0;
+        gap: 0;
+    }
+    /* Hide 찜상품 */
+    header .topset .top1 li:last-child {
+        display: none;
+    }
+    /* Hide top2 */
+    header .topset .top2 {
+        display: none;
+    }
+    /* Hide cart text, keep icon */
+    .cart-text {
+        display: none;
+    }
+
+    /* Logo: centered */
+    header h1 {
+        margin: 0;
+    }
+    header h1 img {
+        width: 65px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Hamburger button: absolute left */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 28px;
+        height: 20px;
         cursor: pointer;
         z-index: 100;
     }
@@ -36,11 +179,23 @@
         width: 100%;
         height: 3px;
         background: #763B13;
-        margin-bottom: 6px;
-        transition: 0.3s;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    /* Hamburger → X when active */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
     }
 
-    /* 히어로 섹션 텍스트 크기 조정 */
+    /* Hero */
+    .hero { margin-top: 0; }
     .hero .textbox {
         right: 5%;
         align-items: center;
@@ -51,21 +206,21 @@
     .hero .textbox p { font-size: 16px; }
     .hero .textbox .btn_go a { width: 140px; padding: 12px; font-size: 16px; }
 
-    /* 섹션 레이아웃 1열 배치 */
-    section .section1 h2 { margin-left: 5%; text-align: center; }
+    /* Section 1 */
+    section .section1 h2 { text-align: center; }
     section .section1 .contentBox { flex-direction: column; align-items: center; gap: 40px; }
     section .section1 .content { width: 90%; }
 
+    /* Section 2 */
     section .section2 .contentBox { flex-direction: column; align-items: center; gap: 30px; }
-    section .section2 .contentBox > div .textbox { max-width: 90%; height: auto; padding-bottom: 20px; }
-    section .section2 > img { display: none; } /* 배경 이미지 숨김으로 가독성 확보 */
+    section .section2 .container .contentBox > a .textbox { max-width: 90%; height: auto; padding-bottom: 20px; }
 }
 
-/* [2. Mobile 전용 (768px 미만)] */
+
+/* ============================================
+   [2] Mobile only (max-width: 767px)
+   ============================================ */
 @media screen and (max-width: 767px) {
-    header .topset .top1 li a { font-size: 13px; }
     .hero .textbox h2 { font-size: 28px; }
-    
-    /* 베스트 메뉴 이미지 가로폭 꽉 차게 */
     section .section2 .contentBox img { width: 100%; }
 }

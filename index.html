@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한끼쉼표</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
@@ -41,7 +42,7 @@
                             <img src="images/shopping_cart.png" alt="shopping_cart">
                             <span class="cart-count">0</span>
                         </div>
-                        장바구니
+                        <span class="cart-text">장바구니</span>
                     </a>
                 </li>
                 <li><a href="#">
@@ -125,6 +126,73 @@
             <span></span>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-menu-top">
+                <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+            </div>
+            <ul class="mobile-gnb">
+                <li>
+                    <a href="#">한끼쉼소개</a>
+                    <ul class="mobile-lnb">
+                        <li><a href="#">브랜드 스토리</a></li>
+                        <li><a href="#">철학</a></li>
+                        <li><a href="#">연혁</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메뉴</a>
+                    <ul class="mobile-lnb">
+                        <li><a href="#">한끼쉼 메뉴</a></li>
+                        <li><a href="#">계절 메뉴</a></li>
+                        <li><a href="#">반찬/사이드</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">매장안내</a>
+                    <ul class="mobile-lnb">
+                        <li><a href="#">가까운 매장 찾기</a></li>
+                        <li><a href="#">신규 오픈 매장</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">이벤트</a>
+                    <ul class="mobile-lnb">
+                        <li><a href="#">진행 중인 이벤트</a></li>
+                        <li><a href="#">당첨자 발표</a></li>
+                        <li><a href="#">지난 이벤트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">뉴스</a>
+                    <ul class="mobile-lnb">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">사회공헌</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">협업</a>
+                    <ul class="mobile-lnb">
+                        <li><a href="#">제휴 문의</a></li>
+                        <li><a href="#">단체 주문</a></li>
+                        <li><a href="#">가맹 문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="mobile-util">
+                <li><a href="#">
+                    <img src="images/favorite.png" alt="favorite">
+                    찜상품
+                </a></li>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+        </div>
+    </div>
 
 
     <div class="hero">
