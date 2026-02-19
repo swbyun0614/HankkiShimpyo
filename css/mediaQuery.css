@@ -240,6 +240,43 @@
         flex: none;
         width: 100%;
     }
+
+    /* Section 4: 모바일 그리드
+       Row 1: img1  | text1
+       Row 2: text3 (full width)
+       Row 3: img2  | text2
+       Row 4: text4 | img3
+       Row 5: img4  | text5
+    */
+    section .section4 .review-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "img1  text1"
+            "text3 text3"
+            "img2  text2"
+            "text4 img3"
+            "img4  text5";
+        gap: 14px;
+    }
+    section .section4 .review-item.sec4_img2,
+    section .section4 .review-item.sec4_img3,
+    section .section4 .review-item.sec4_img4 {
+        max-height: none;
+    }
+    section .section4 .review-item.review-text {
+        padding: 20px 16px;
+    }
+    section .section4 .review-item.review-text h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    section .section4 .review-item.review-text .reviewer {
+        font-size: 13px;
+    }
+    section .section4 .review-item.review-text p {
+        font-size: 13px;
+    }
 }
 
 
