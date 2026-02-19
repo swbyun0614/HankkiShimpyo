@@ -190,8 +190,19 @@
     }
 
     /* Hero */
-    .hero { margin-top: 0; }
+    .hero { margin-top: 0; height: 350px; overflow: hidden; }
+    .hero .swiper,
+    .hero .swiper-wrapper,
+    .hero .swiper-slide { height: 100%; }
+    /* 페이지네이션 위치 재조정 (데스크톱 590px 값 리셋) */
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 14px !important;
+    }
     .hero .textbox {
+        top: 10%;
         right: 5%;
         align-items: center;
         width: 90%;
