@@ -6,6 +6,11 @@
 
 body {font-family: 'Paperozi';}
 
+/* Container */
+.container {
+    width: 100%; max-width: 1420px; margin: 0 auto; box-sizing: border-box;
+}
+
 
 header .topset {
     display: flex; justify-content: space-between;
@@ -31,11 +36,9 @@ header .topset {
     }
 
     header h1 img {
-        display: block; margin: 15px auto 0;
-        width: 83px;      /* 로고의 절대적인 크기 지정 */
-        max-width: 100%;   /* 화면이 로고보다 작아질 경우 대비 */
-        height: auto;      /* 비율 유지 */
-        }
+        display: block;
+        width: 83px; max-width: 100%; height: auto; margin: 15px auto 0;
+    }
 
 header nav .gnb {
     position: relative;
@@ -47,23 +50,22 @@ header nav .gnb {
     }
         header nav .gnb > li > a {
             display: block;
-            font-size: 18px; padding: 14px 50px;
+            padding: 14px 50px; font-size: 18px;
         }
         header nav .gnb > li:hover > a {
             font-weight: 500;
         }
             header nav .gnb li .lnb {
                 position: absolute; left: 50%; top: 50px; z-index: 10;
-                transform: translateX(-50%);
                 display: none;
-                width: 200px; border-radius: 30px; transition: max-height 0.4s ease-in-out; overflow: hidden;
+                width: 200px; border-radius: 30px; overflow: hidden; transform: translateX(-50%); transition: max-height 0.4s ease-in-out;
             }
             header nav .gnb li:hover .lnb {
                 transition: 0.1s;
             }
             header nav .gnb li .lnb li a {
-                display: block; text-align: center;
-                padding: 15px; border-radius: 30px; background: linear-gradient(to bottom, #fff, 90%, #f7f7f7); font-size: 15px; border-bottom: 2px solid #f7f7f7;
+                display: block;
+                padding: 15px; background: linear-gradient(to bottom, #fff, 90%, #f7f7f7); border-radius: 30px; border-bottom: 2px solid #f7f7f7; font-size: 15px; text-align: center;
             }
             header nav .gnb li .lnb li:last-child a {
                 padding-bottom: 20px;
@@ -73,53 +75,22 @@ header nav .gnb {
             }
 
 .nav-indicator {
-    position: absolute;
-    bottom: 0px; /* 위치 조정 */
-    left: 0;
-    height: 13px;  /* 이미지 높이에 맞게 조정 */
-    background: url('../images/gnb_on.png') no-repeat center; 
-    background-size: contain;
-    transition: all 0.3s ease-out; /* 이동을 부드럽게 만드는 핵심 */
-    opacity: 0;
-    pointer-events: none; /* 인디케이터가 마우스 이벤트를 방해하지 않도록 설정 */
-    z-index: 1;
+    position: absolute; bottom: 0px; left: 0; z-index: 1;
+    height: 13px; background: url('../images/gnb_on.png') no-repeat center; background-size: contain; opacity: 0; pointer-events: none; transition: all 0.3s ease-out;
 }
 
 /* 부모 요소: 배지의 기준점이 됨 */
 .cart-wrapper {
     position: relative;
     display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px; /* 텍스트(장바구니)와의 간격 */
+    margin-right: 5px; vertical-align: middle;
 }
 
-/* 부모 요소: 배지의 기준점이 됨 */
-.cart-wrapper {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px; /* 텍스트(장바구니)와의 간격 */
-}
 /* 주황색 동그라미 배지 */
 .cart-count {
-    position: absolute;
-    top: -5px;    /* 위쪽 위치 미세 조정 */
-    right: -8px;  /* 오른쪽 위치 미세 조정 */
-    
-    width: 15px;
-    height: 15px;
-    background-color: #E18601; /* 주황색 */
-    color: white;
-    
-    border-radius: 50%; /* 동그랗게 */
-    font-size: 10px;    /* 작은 글씨 */
-    font-weight: 600;
-    line-height: 15px;  /* 세로 중앙 정렬 */
-    text-align: center; /* 가로 중앙 정렬 */
-    
-    display: none;
-    align-items: center;
-    justify-content: center;
+    position: absolute; top: -5px; right: -8px;
+    display: none; align-items: center; justify-content: center;
+    width: 15px; height: 15px; background-color: #E18601; border-radius: 50%; font-size: 10px; font-weight: 600; line-height: 15px; color: white; text-align: center;
 }
 
 .hero {
@@ -130,27 +101,23 @@ header nav .gnb {
     background: none !important;
 }
 .swiper-slide > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
+    width: 100%; height: 100%; object-fit: cover;
 }
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
         bottom: var(--swiper-pagination-bottom, 590px) !important;
     }
     .swiper-pagination-bullet {
-    background: #763B13 !important;
-    opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
+        background: #763B13 !important; opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
     }
     .swiper-pagination-bullet-active-main {
-    background: #E18601 !important;
+        background: #E18601 !important;
     }
 .hero .textbox {
     position: absolute; top: 25%; right: 14%; z-index: 5;
     display: flex; flex-direction: column; align-items: end;
 }
     .hero .textbox p {
-        font-size: 22px; margin-top: 20px;
+        margin-top: 20px; font-size: 22px;
     }
     .hero .textbox p.date {
         font-size: 20px; font-weight: 500; color: #fff;
@@ -163,35 +130,26 @@ header nav .gnb {
     }
     .hero .textbox .btn_go a {
         display: flex; justify-content: center; align-items: center; gap: 15px;
-        width: 180px; padding: 20px; color: #fff; border-radius: 40px; font-size: 18px; margin-top: 38px;
-        border: 3px solid #fff;
+        width: 180px; margin-top: 38px; padding: 20px; border: 3px solid #fff; border-radius: 40px; font-size: 18px; color: #fff;
     }
     .hero .textbox .btn_go:hover a img {
         animation: btnAni .3s;
     }
     @keyframes btnAni {
-        0% {
-            margin-left: 0;
-        }
-        50% {
-            margin-left: 10px;
-        }
-        80% {
-            margin-left: -2px;
-        }
-        100% {
-            margin-left: 0;
-        }
+        0% { margin-left: 0; }
+        50% { margin-left: 10px; }
+        80% { margin-left: -2px; }
+        100% { margin-left: 0; }
     }
-    
+
 section .section1 {
     margin-top: 86px;
 }
 section .section1 h2 {
-    font-size: 32px; margin-bottom: 54px; margin-left: 15%; font-weight: 600;
+    margin-bottom: 54px; font-size: 32px; font-weight: 600;
 }
 section .section1 .contentBox {
-    display: flex; gap: 90px; justify-content: center;
+    display: flex; justify-content: center; gap: 90px;
 }
     section .section1 .content h3 {
         font-size: 26px; font-weight: 600;
@@ -201,21 +159,20 @@ section .section1 .contentBox {
         margin-bottom: 15px; padding-bottom: 14px; border-bottom: 1px solid #EFBF39;
     }
     section .section1 .content div > span {
-        color: #848484; font-size: 14px;
+        font-size: 14px; color: #848484;
     }
     section .section1 .content div > span a {
         padding: 8px 0;
     }
         section .section1 .content .list li a {
-            display: flex; justify-content: space-between; gap: 5px; align-items: center;
+            display: flex; justify-content: space-between; align-items: center; gap: 5px;
         }
         section .section1 .content .list li a:hover span:first-child {
             text-decoration: underline;
         }
         section .section1 .content .list li a span:first-child {
-            font-size: 17px; font-weight: 400; flex-grow: 1;
-            text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
-            line-height: 35px; width: 276px; color: #474747;
+            flex-grow: 1;
+            width: 276px; font-size: 17px; font-weight: 400; line-height: 35px; color: #474747; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
         }
         section .section1 .content .list li a span.date {
             flex-grow: 0;
@@ -226,35 +183,180 @@ section .section2 {
     position: relative;
     margin-top: 200px;
 }
-    section .section2 h2 {
-        text-align: center;
-        font-size: 32px; font-weight: 600; margin-bottom: 50px;
+section .section2 .container {
+    display: flex; flex-direction: column; align-items: center;
+}
+    section .section2 .container h2 {
+        margin-bottom: 50px; font-size: 32px; font-weight: 600; text-align: center;
     }
-    section .section2 .contentBox {
-        display: flex; gap: 100px; justify-content: center;
+    section .section2 .container .contentBox {
+        display: flex; justify-content: center; gap: 100px;
     }
-    section .section2 .contentBox > a .textbox {
+    section .section2 .container .contentBox > a .textbox {
         max-width: 381px; height: 212px; background: #F2EEED;
     }
-    section .section2 > img {
+    section .section2 .section_bg {
         position: absolute; left: 0; top: 126px; z-index: -1;
         transform: translateX(-75%);
     }
-    section .section2 .contentBox .textbox > div {
+    section .section2 .container .contentBox .textbox > div {
         padding: 28px 33px; font-size: 18px;
     }
-    section .section2 .contentBox .textbox h3 {
+    section .section2 .container .contentBox .textbox h3 {
         font-size: 22px; font-weight: 600;
     }
-    section .section2 .contentBox .textbox p {
-        margin-top: 25px; color: #878787; font-size: 16px; font-weight: 400;
+    section .section2 .container .contentBox .textbox p {
+        margin-top: 25px; font-size: 16px; font-weight: 400; color: #878787;
     }
-    section .section2 .contentBox .textbox span {
+    section .section2 .container .contentBox .textbox span {
         display: block;
         margin-top: 35px;
     }
-    section .section2 > a {
+    section .section2 .container > a.btn_more {
         display: flex; justify-content: center; align-items: center; gap: 17px;
-        font-size: 15px; font-weight: 500; color: #848484;
-        margin: 53px auto 0;
+        width: fit-content; margin-top: 53px; padding: 10px; font-size: 15px; font-weight: 500; color: #848484;
+    }
+    section .section2 .container > a.btn_more:hover img {
+        animation: btnAni .3s;
+    }
+
+/* Section 3 - Banner Links */
+section .section3 {
+    margin-top: 185px;
+}
+    section .section3 .banner-links {
+        display: flex; justify-content: center; gap: 20px;
+    }
+    section .section3 .banner-link {
+        position: relative;
+        display: block;
+        flex: 1; height: 150px; border-radius: 60px 60px 0 0; overflow: hidden; transition: .3s;
+    }
+    section .section3 .banner-link.two img.bgimg {
+        transform: scale(1.1);
+    }
+    section .section3 .banner-link img.icon {
+        position: absolute; bottom: 0; right: 2.18vw; z-index: 15;
+    }
+    section .section3 .banner-link.two img.icon {
+        right: 4.42vw;
+    }
+    section .section3 .banner-link .banner-overlay {
+        position: absolute; top: -80px; right: -40px;
+        width: 600px; height: 800px; background: #EFBF39; transform: rotate(50deg); transition: .3s;
+    }
+    section .section3 a.banner-link:hover {
+        z-index: 10;
+        transform: scale(1.05) translateY(-4px); width: 80%;
+    }
+    section .section3 .banner-link:hover .banner-overlay {
+        width: 700px; height: 900px;
+    }
+    section .section3 .banner-link .banner-overlay.two {
+        background: #F5DD79;
+    }
+    section .section3 .banner-link .banner-text {
+        position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); z-index: 10;
+        display: flex; align-items: center; gap: 15px;
+        font-size: 28px; font-weight: 600; color: #333; white-space: nowrap;
+    }
+
+/* Section 4 - Review Grid */
+section .section4 {
+    margin-top: 180px;
+}
+    section .section4 h2 {
+        margin-bottom: 50px; font-size: 32px; font-weight: 600; text-align: center;
+    }
+    section .section4 .review-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "img1 text1 img2 text2"
+            "img1 text3 text3 text4"
+            "img3 text5 img4 img4";
+        gap: 28px 20px;
+        width: 100%;
+    }
+    section .section4 .review-item {
+        overflow: hidden;
+    }
+    /* 명시적 그리드 배치 */
+    section .section4 .review-item.sec4_img1 {
+        grid-area: img1;
+    }
+    section .section4 .review-item.sec4_img2 {
+        grid-area: img2; max-height: 250px;
+    }
+    section .section4 .review-item.sec4_img3 {
+        grid-area: img3; max-height: 250px;
+    }
+    section .section4 .review-item.sec4_img4 {
+        grid-area: img4; max-height: 250px;
+    }
+    section .section4 .review-grid > .review-text:nth-child(2) { grid-area: text1; }
+    section .section4 .review-grid > .review-text:nth-child(4) { grid-area: text2; }
+    section .section4 .review-grid > .review-text:nth-child(5) { grid-area: text3; }
+    section .section4 .review-grid > .review-text:nth-child(6) { grid-area: text4; }
+    section .section4 .review-grid > .review-text:nth-child(8) { grid-area: text5; }
+
+    section .section4 .review-item.review-img-tall img,
+    section .section4 .review-item.review-img img,
+    section .section4 .review-item.review-img-wide img {
+        width: 100%; height: 100%; object-fit: cover;
+    }
+    section .section4 .review-item.review-text {
+        display: flex; flex-direction: column; justify-content: center;
+        padding: 50px 34px; background: #fff; border: 1px solid #EFBF39; box-shadow: 7px 8px 0 0 #F5DD79;
+    }
+    section .section4 .review-item.review-text h3 {
+        margin-bottom: 20px; font-size: 20px; font-weight: 600; color: #333;
+    }
+    section .section4 .review-item.review-text .reviewer {
+        display: block;
+        margin-bottom: 6px; font-size: 15px; color: #878787;
+    }
+    section .section4 .review-item.review-text p {
+        font-size: 18px; line-height: 1.4;
+    }
+
+/* TOP Button */
+.top-btn {
+    display: flex; justify-content: center;
+    margin: 94px auto;
+}
+    .top-btn a {
+        display: flex; justify-content: center; align-items: center;
+        width: fit-content; padding: 5px 20px; border: 2px solid #848484; border-radius: 30px; font-size: 15px; font-weight: 600; color: #848484; transition: all 0.3s;
+    }
+    .top-btn a:hover {
+        background: #763B13; border-color: #763B13; color: #fff;
+    }
+    .top-btn a span {
+        margin-left: 5px; font-size: 20px; transform: translateY(-2px); transition: .3s;
+    }
+    .top-btn a:hover span {
+        transform: translateY(-6px);
+    }
+
+/* Footer */
+footer {
+    padding: 80px 0; background: #763B13; font-family: Presentation;
+}
+    footer .footer-content {
+        display: flex; gap: 64px; justify-content: center;
+        padding: 0 20px;
+    }
+    footer .footer-logo img {
+        width: 80px; filter: brightness(0) invert(1);
+    }
+    footer .footer-info {
+        font-size: 15px; color: rgba(255,255,255,0.8);
+    }
+    footer .footer-info p {
+        margin-bottom: 5px;
+    }
+    footer .footer-info .copyright {
+        margin-top: 15px; font-size: 12px; color: rgba(255,255,255,0.6);
     }
