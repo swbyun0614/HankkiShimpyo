@@ -105,11 +105,8 @@
     /* --- Header: compact single row --- */
     header {
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 70px;
-        padding: 0 20px;
+        display: flex; align-items: center; justify-content: center;
+        height: 70px; padding: 0 20px;
     }
 
     /* Hide GNB nav */
@@ -202,14 +199,17 @@
     }
     .hero .textbox {
         top: 10%;
-        right: 5%;
-        align-items: center;
+        right: 7%;
+        align-items: end;
         width: 90%;
         text-align: center;
     }
-    .hero .textbox h2 { font-size: 36px; }
-    .hero .textbox p { font-size: 16px; }
-    .hero .textbox .btn_go a { width: 140px; padding: 12px; font-size: 16px; }
+    .hero .textbox h2 { font-size: 33px; }
+    .hero .textbox p { font-size: 12px; }
+    .hero .textbox p.date {
+        font-size: 11px;
+    }
+    .hero .textbox .btn_go a { padding: 12px; font-size: 16px; }
 
     /* Section 1: 첫 번째 content만 노출 */
     section .section1 h2 { text-align: center; }

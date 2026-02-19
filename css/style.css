@@ -128,7 +128,7 @@ header nav .gnb {
     display: flex; flex-direction: column; align-items: end;
 }
     .hero .textbox p {
-        margin-top: 20px; font-size: 22px;
+        margin-top: clamp(7px, 0.78vw, 20px); font-size: 22px;
     }
     .hero .textbox p.date {
         font-size: 20px; font-weight: 500; color: #fff;
@@ -141,7 +141,7 @@ header nav .gnb {
     }
     .hero .textbox .btn_go a {
         display: flex; justify-content: center; align-items: center; gap: 15px;
-        width: 180px; margin-top: 38px; padding: 20px; border: 3px solid #fff; border-radius: 40px; font-size: 18px; color: #fff;
+        width: clamp(98px, 9.37vw, 180px); margin-top: clamp(12px, 1.5vw, 38px); padding: 20px; border: 3px solid #fff; border-radius: 40px; font-size: 18px; color: #fff;
     }
     .hero .textbox .btn_go:hover a img {
         animation: btnAni .3s;
